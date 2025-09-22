@@ -2,6 +2,10 @@ class Person {
     #name = ""
     #age = 0
 
+    constructor(name) {
+        this.#name = name
+    }
+
     setName(name) {
         this.#name = name
     }
