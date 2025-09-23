@@ -5,10 +5,6 @@ const alice = new Person(`Alice`)
 
 const persons = [bob, brian, alice]
 
-bob.printPerson()
-brian.printPerson()
-alice.printPerson()
-
 while (bob.getAge() < 15) {
     bob.becomeOlder()
 }
@@ -17,9 +13,13 @@ for (let i = 0; i < 20; i++) {
     brian.becomeOlder()
 }
 
-bob.printPerson()
-brian.printPerson()
-alice.printPerson()
+while (bob.getWeight() < 200) {
+    bob.eat()
+}
+
+while (bob.getHeight() < 1.8) {
+    bob.grow()
+}
 
 persons.forEach(person => {
     if (person.isAdult()) {
@@ -28,3 +28,9 @@ persons.forEach(person => {
         console.log(person.getName() + ` is not adult`)
     }
 })
+
+persons.forEach(person => {
+    console.log(person.printPerson())
+}) 
+
+
